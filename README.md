@@ -1,14 +1,11 @@
-
 # flutter_multiselect
 
 Flutter package for multi-select UI widget
 
 [![pub package](https://img.shields.io/badge/flutter__multiselect-v0.2.0-green.svg)](https://pub.dartlang.org/packages/flutter_multiselect)
 
-
 Android and iOS screenshot-
 ![screenshot](https://i.imgur.com/YEalQ1R.png)
-
 
 ## Getting Started
 
@@ -30,6 +27,7 @@ import 'package:flutter_multiselect/flutter_multiselect.dart';
 By default, there is no UI control for multi-select in iOS and Android, and my widget can be used to bridge this gap.
 
 ## Example
+
 ```dart
 child: MultiSelect(
   autovalidate: false,

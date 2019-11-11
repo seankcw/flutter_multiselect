@@ -11,7 +11,7 @@ class SelectionModal extends StatefulWidget {
   final String valueField;
   final String title;
   final int maxLength;
-  
+
   SelectionModal(
       {this.filterable,
       this.dataSource,
@@ -123,17 +123,22 @@ class _SelectionModalState extends State<SelectionModal> {
                       ),
                       color: Theme.of(context).primaryColor,
                       textColor: Colors.white,
-                      onPressed: _localDataSourceWithState.where((item) => item['checked']).length > widget.maxLength ? null :  
-                      (){
-                        var selectedValuesObjectList = _localDataSourceWithState
-                            .where((item) => item['checked'])
-                            .toList();
-                          var selectedValues = [];
-                          selectedValuesObjectList.forEach((item) {
-                            selectedValues.add(item['value']);
-                          });
-                          Navigator.pop(context, selectedValues);
-                      },
+                      onPressed: _localDataSourceWithState
+                                  .where((item) => item['checked'])
+                                  .length >
+                              widget.maxLength
+                          ? null
+                          : () {
+                              var selectedValuesObjectList =
+                                  _localDataSourceWithState
+                                      .where((item) => item['checked'])
+                                      .toList();
+                              var selectedValues = [];
+                              selectedValuesObjectList.forEach((item) {
+                                selectedValues.add(item['value']);
+                              });
+                              Navigator.pop(context, selectedValues);
+                            },
                     ),
                   )
                 ]),
