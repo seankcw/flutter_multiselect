@@ -185,7 +185,8 @@ class _SelectionModalState extends State<SelectionModal> {
                 new Text(
                   'Currently selected ${selectedOptions.length} items (tap to remove)', // use languageService here
                   style: TextStyle(
-                      color: Colors.black87, fontWeight: FontWeight.bold),
+                      color: Theme.of(context).cardColor,
+                      fontWeight: FontWeight.bold),
                 ),
                 ConstrainedBox(
                     constraints: new BoxConstraints(
