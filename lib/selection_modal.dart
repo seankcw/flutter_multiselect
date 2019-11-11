@@ -94,20 +94,20 @@ class _SelectionModalState extends State<SelectionModal> {
           ),
           _currentlySelectedOptions(),
           Container(
-            color: Colors.grey.shade600,
+            color: Theme.of(context).primaryColor.withOpacity(0.7),
             child: ButtonBar(
                 alignment: MainAxisAlignment.spaceBetween,
                 mainAxisSize: MainAxisSize.max,
                 children: <Widget>[
                   ButtonTheme(
                     height: 50.0,
-                    child: RaisedButton.icon(
+                    child: FlatButton.icon(
                       label: Text('Cancel'),
                       icon: Icon(
                         Icons.clear,
                         size: 20.0,
                       ),
-                      color: Colors.grey.shade100,
+                      textColor: Colors.white,
                       onPressed: () {
                         Navigator.pop(context, null);
                       },
@@ -115,13 +115,12 @@ class _SelectionModalState extends State<SelectionModal> {
                   ),
                   ButtonTheme(
                     height: 50.0,
-                    child: RaisedButton.icon(
+                    child: FlatButton.icon(
                       label: Text('Save'),
                       icon: Icon(
                         Icons.save,
                         size: 20.0,
                       ),
-                      color: Theme.of(context).primaryColor,
                       textColor: Colors.white,
                       onPressed: _localDataSourceWithState
                                   .where((item) => item['checked'])
@@ -178,7 +177,7 @@ class _SelectionModalState extends State<SelectionModal> {
     return selectedOptions.length > 0
         ? Container(
             padding: EdgeInsets.all(10.0),
-            color: Colors.grey.shade400,
+            color: Theme.of(context).primaryColor.withOpacity(0.7),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -217,7 +216,7 @@ class _SelectionModalState extends State<SelectionModal> {
                 item['checked']
                     ? Icons.check_box
                     : Icons.check_box_outline_blank,
-                color: Theme.of(context).primaryColor),
+                color: Colors.white),
             scale: 1.5,
           ),
           onTap: () {
