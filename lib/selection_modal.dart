@@ -183,10 +183,9 @@ class _SelectionModalState extends State<SelectionModal> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
                 new Text(
-                  'Currently selected ${selectedOptions.length} items (tap to remove)', // use languageService here
+                  'Currently selected ${selectedOptions.length} items (max: ${widget.maxLength})', // use languageService here
                   style: TextStyle(
-                      color: Theme.of(context).cardColor,
-                      fontWeight: FontWeight.bold),
+                      color: Colors.white, fontWeight: FontWeight.bold),
                 ),
                 ConstrainedBox(
                     constraints: new BoxConstraints(
