@@ -116,7 +116,7 @@ class _SelectionModalState extends State<SelectionModal> {
                   ButtonTheme(
                     height: 50.0,
                     child: FlatButton.icon(
-                      label: Text('Save'),
+                      label: Text('Confirm'),
                       icon: Icon(
                         Icons.save,
                         size: 20.0,

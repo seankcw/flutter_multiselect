@@ -149,11 +149,11 @@ class MultiSelect extends FormField<dynamic> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 mainAxisSize: MainAxisSize.max,
                                 children: <Widget>[
-                                  Icon(
-                                    Icons.arrow_downward,
-                                    color: Theme.of(state.context).primaryColor,
-                                    size: 30.0,
-                                  )
+                                  // Icon(
+                                  //   Icons.arrow_downward,
+                                  //   color: Theme.of(state.context).primaryColor,
+                                  //   size: 30.0,
+                                  // )
                                 ],
                               )
                             ],
